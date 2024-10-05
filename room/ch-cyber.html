@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CyberHunt: Cybersecurity Quiz</title>
+  <link rel="stylesheet" href="aoc-html.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">CyberHunt: Cybersecurity Quiz</div>
+  </header>
+
+  <!-- Quiz Section -->
+  <section class="quiz-section">
+    <h1>Cybersecurity Quiz</h1>
+    <p>Answer all the questions correctly to get the flag!</p>
+    <form id="quiz-form">
+      <div class="question">
+        <label for="q1">1. What does CIA stand for in cybersecurity?</label>
+        <input type="text" id="q1" placeholder="Answer here..." required>
+      </div>
+      <div class="question">
+        <label for="q2">2. What is the process of converting data into an unreadable format to prevent unauthorized access?</label>
+        <input type="text" id="q2" placeholder="Answer here..." required>
+      </div>
+      <div class="question">
+        <label for="q3">3. Which type of attack involves tricking individuals into revealing confidential information?</label>
+        <input type="text" id="q3" placeholder="Answer here..." required>
+      </div>
+      <div class="question">
+        <label for="q4">4. What is the term used for identifying weaknesses in systems, networks, or processes?</label>
+        <input type="text" id="q4" placeholder="Answer here..." required>
+      </div>
+      <div class="question">
+        <label for="q5">5. What does the abbreviation "DDoS" stand for?</label>
+        <input type="text" id="q5" placeholder="Answer here..." required>
+      </div>
+      <button type="submit" class="btn">Submit</button>
+    </form>
+    <div id="result" class="result"></div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2024 Advent of Cyber. All Rights Reserved.</p>
+  </footer>
+
+  <script src="aoc-cyber.js"></script>
+</body>
+</html>

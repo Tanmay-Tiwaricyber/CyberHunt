@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberHunt - Challenges</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to CyberHunt, <span id="user-name">User</span></h1>
+        <p>Your Points: <span id="user-points">0</span></p>
+    </header>
+
+    <h2>CTF Challenges</h2>
+
+    <!-- HTML Challenge -->
+    <div class="challenge" id="challenge-1">
+        <h3>HTML Room</h3>
+        <p>Find the hidden flag in this HTML code challenge.</p>
+        <input type="text" id="flag-input-1" placeholder="Submit Flag">
+        <button onclick="submitFlag(1, 'CH{html-completed}')">Submit</button>
+        <a href="room/ch-html.html"><button>Find Flag here</button></a>
+    </div>
+
+    <!-- Python Challenge -->
+    <div class="challenge" id="challenge-2">
+        <h3>Python Room</h3>
+        <p>Discover the hidden key in this Python challenge.</p>
+        <input type="text" id="flag-input-2" placeholder="Submit Flag">
+        <button onclick="submitFlag(2, 'CH{py-captured}')">Submit</button>
+        <a href="room/ch-py.html"><button>Find Flag here</button></a>
+    </div>
+
+    <!-- Advanced HTML Challenge -->
+    <div class="challenge" id="challenge-3">
+        <h3>Cybersecurity Room</h3>
+        <p>Identify and exploit security vulnerabilities to capture flags.</p>
+        <input type="text" id="flag-input-3" placeholder="Submit Flag">
+        <button onclick="submitFlag(3, 'CH{cyber-exploit}')">Submit</button>
+        <a href="room/ch-cyber.html"><button>Find Flag here</button></a>
+    </div>
+
+    <!-- Python Hidden Variable -->
+    <!-- <div class="challenge" id="challenge-4">
+        <h3>Python Hidden Variable</h3>
+        <p>Find the hidden flag in this Python script challenge. Hint: Look for hidden variables.</p>
+        <input type="text" id="flag-input-4" placeholder="Submit Flag">
+        <button onclick="submitFlag(4, 'hiddenVar000')">Submit</button>
+    </div> -->
+
+    <script>
+        let points = 0;
+        const totalChallenges = 3; // Update this based on the number of challenges
+        let completedChallenges = 0;
+
+        // Get the user's name from localStorage
+        const userName = localStorage.getItem('userName');
+        if (userName) {
+            document.getElementById('user-name').textContent = userName;
+        } else {
+            window.location.href = 'index.html'; // Redirect if no name is found
+        }
+
+        // Function to submit flag and track points
+        function submitFlag(challengeId, correctFlag) {
+            const flagInput = document.getElementById(`flag-input-${challengeId}`).value.trim();
+
+            if (flagInput === correctFlag) {
+                alert(`Correct flag submitted for Challenge ${challengeId}!`);
+                // Award points for this challenge
+                points += 100;  // Assume each challenge gives 100 points
+                completedChallenges += 1;
+
+                // Update user points on the page
+                document.getElementById('user-points').textContent = points;
+
+                // Check if all challenges are completed
+                if (completedChallenges === totalChallenges) {
+                    alert('Congratulations! You completed all challenges.');
+                    localStorage.setItem('userPoints', points); // Save the user's points in localStorage
+                    window.location.href = 'certificate.html';  // Automatically redirect to the certificate page
+                }
+            } else {
+                alert('Incorrect flag. Please try again.');
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #e9f1f7;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #1e90ff;
+    margin: 20px 0;
+}
+
+header {
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-bottom: 2px solid #1e90ff;
+}
+
+p {
+    font-size: 18px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #104e8b;
+}
+
+.challenge {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 2px solid #1e90ff;
+    border-radius: 10px;
+    width: 50%;
+    text-align: left;
+}
+
+input {
+    padding: 10px;
+    width: 60%;
+    margin-right: 10px;
+}
+
+#certificate-image {
+    margin-top: 20px;
+    width: 80%;
+    height: auto;
+}
+/* Modal styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+}
+
+.modal-content {
+    background-color: #f9f9f9;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 400px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.modal input {
+    width: 90%;
+    padding: 10px;
+    font-size: 18px;
+    margin-top: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.modal button {
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal button:hover {
+    background-color: #104e8b;
+}

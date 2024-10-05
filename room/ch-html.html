@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CyberHunt: HTML Quiz</title>
+  <link rel="stylesheet" href="aoc-html.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">CyberHunt</div>
+  </header>
+
+  <!-- Quiz Section -->
+  <section class="quiz-section">
+    <h1>HTML Quiz</h1>
+    <p>Answer all the questions correctly to get the flag!</p>
+    <form id="quiz-form">
+      <div class="question">
+        <label for="q1">1. What does HTML stand for?</label>
+        <input type="text" id="q1" placeholder="Answer here..." required>
+      </div>
+      <div class="question">
+        <label for="q2">2. Which HTML tag is used to define a hyperlink?</label>
+        <input type="text" id="q2" placeholder="Answer here..." required>
+      </div>
+      <div class="question">
+        <label for="q3">3. What is the largest HTML heading tag?</label>
+        <input type="text" id="q3" placeholder="Answer here..." required>
+      </div>
+      <div class="question">
+        <label for="q4">4. Which HTML element is used to define the title of a document?</label>
+        <input type="text" id="q4" placeholder="Answer here..." required>
+      </div>
+      <div class="question">
+        <label for="q5">5. What attribute is used to provide a unique identifier for an HTML element?</label>
+        <input type="text" id="q5" placeholder="Answer here..." required>
+      </div>
+      <button type="submit" class="btn">Submit</button>
+    </form>
+    <div id="result" class="result"></div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2024 Advent of Cyber. All Rights Reserved.</p>
+  </footer>
+
+  <script src="aoc-html.js"></script>
+</body>
+</html>

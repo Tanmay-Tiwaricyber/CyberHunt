@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberHunt - Capture the Flag</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to CyberHunt</h1>
+        <p>Challenge yourself with real-world cybersecurity problems</p>
+        <button onclick="showNameModal()">Start CTF</button>
+        <button onclick="window.location.href='certificate.html'">View Certificate</button>
+    </header>
+
+    <!-- Modal to prompt the user's name -->
+    <div id="nameModal" class="modal">
+        <div class="modal-content">
+            <h2>Enter Your Name</h2>
+            <input type="text" id="user-name-input" placeholder="Enter your name">
+            <button onclick="saveUserName()">Submit</button>
+        </div>
+    </div>
+
+    <script>
+        // Function to display the name modal
+        function showNameModal() {
+            document.getElementById('nameModal').style.display = 'block';
+        }
+
+        // Function to save the user's name and redirect to the CTF page
+        function saveUserName() {
+            const userName = document.getElementById('user-name-input').value.trim();
+            if (userName) {
+                // Store the user's name in localStorage
+                localStorage.setItem('userName', userName);
+                window.location.href = 'ctf.html';  // Redirect to CTF page
+            } else {
+                alert('Please enter your name');
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advent of Cyber: Python Quiz</title>
+  <link rel="stylesheet" href="aoc-html.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">Advent of Cyber: Python Quiz</div>
+  </header>
+
+  <!-- Quiz Section -->
+  <section class="quiz-section">
+    <h1>Python Quiz</h1>
+    <p>Answer all the questions correctly to get the flag!</p>
+    <form id="quiz-form">
+      <div class="question">
+        <label for="q1">1. What is the keyword to define a function in Python?</label>
+        <input type="text" id="q1" placeholder="Answer here..." required>
+      </div>
+      <div class="question">
+        <label for="q2">2. How do you create a list in Python?</label>
+        <input type="text" id="q2" placeholder="Answer here..." required>
+      </div>
+      <div class="question">
+        <label for="q3">3. Which operator is used to check equality in Python?</label>
+        <input type="text" id="q3" placeholder="Answer here..." required>
+      </div>
+      <div class="question">
+        <label for="q4">4. How do you import a module in Python?</label>
+        <input type="text" id="q4" placeholder="Answer here..." required>
+      </div>
+      <div class="question">
+        <label for="q5">5. What is the output of `print(2**3)` in Python?</label>
+        <input type="text" id="q5" placeholder="Answer here..." required>
+      </div>
+      <button type="submit" class="btn">Submit</button>
+    </form>
+    <div id="result" class="result"></div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2024 Advent of Cyber. All Rights Reserved.</p>
+  </footer>
+
+  <script src="aoc-py.js"></script>
+</body>
+</html>

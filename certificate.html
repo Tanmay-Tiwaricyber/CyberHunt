@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate of Completion</title>
+    <style>
+        #certificate-canvas {
+            display: none;
+            width: 100%;
+            height: auto;
+            border: 2px solid #1e90ff;
+        }
+
+        #certificate-image {
+            display: none;
+            width: 100%;
+            height: auto;
+        }
+
+        body {
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Well Done</h1>
+    <canvas id="certificate-canvas" width="800" height="600"></canvas>
+    <img id="certificate-image" alt="Generated Certificate">
+
+    <script src="assets/js/certificate.js"></script>
+    <script>
+        window.onload = generateCertificate;  // Automatically generate the certificate on page load
+    </script>
+</body>
+</html>
