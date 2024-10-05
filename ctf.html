@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CyberHunt - Challenges</title>
     <link rel="stylesheet" href="assets/css/styles.css">
+    
 </head>
 <body>
     <header>
@@ -41,18 +42,11 @@
         <a href="room/ch-cyber.html"><button>Find Flag here</button></a>
     </div>
 
-    <!-- Python Hidden Variable -->
-    <!-- <div class="challenge" id="challenge-4">
-        <h3>Python Hidden Variable</h3>
-        <p>Find the hidden flag in this Python script challenge. Hint: Look for hidden variables.</p>
-        <input type="text" id="flag-input-4" placeholder="Submit Flag">
-        <button onclick="submitFlag(4, 'hiddenVar000')">Submit</button>
-    </div> -->
-
     <script>
         let points = 0;
         const totalChallenges = 3; // Update this based on the number of challenges
         let completedChallenges = 0;
+        const challengeStatus = [false, false, false]; // Track completed challenges
 
         // Get the user's name from localStorage
         const userName = localStorage.getItem('userName');
@@ -67,10 +61,16 @@
             const flagInput = document.getElementById(`flag-input-${challengeId}`).value.trim();
 
             if (flagInput === correctFlag) {
+                if (challengeStatus[challengeId - 1]) {
+                    alert('Flag already submitted for this challenge.');
+                    return;
+                }
+
                 alert(`Correct flag submitted for Challenge ${challengeId}!`);
                 // Award points for this challenge
                 points += 100;  // Assume each challenge gives 100 points
                 completedChallenges += 1;
+                challengeStatus[challengeId - 1] = true; // Mark this challenge as completed
 
                 // Update user points on the page
                 document.getElementById('user-points').textContent = points;
